@@ -1,0 +1,27 @@
+.rect{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: fixed;
+    /** 动画名称*/
+    animation-name: mymove;
+     /** 动画持续时间*/
+    animation-duration: 4s;
+     /** 动画效果 慢-快-慢...linear 匀速*/
+    animation-timing-function: ease;
+     /** 动画延时*/
+    animation-delay: 1s;
+    /** 动画执行次数  无限循环infinite*/
+    animation-iteration-count: 2;
+    /** 动画反方向播放*/
+    animation-direction: alternate;
+}
+@keyframes mymove{
+    /* from {top:0;left: 0px;}
+    to {top:0;left: 80%;} */
+    0% {top:0;left: 20%; background-color: red;}
+    25%{top:0;left: 80%;background-color:blue;}
+    50%{top:80%;left: 80%;background-color:green;}
+    75%{top:80%;left: 20%;background-color:black;}
+    100% {top:0;left: 20%;background-color:red;}
+}
